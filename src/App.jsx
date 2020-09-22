@@ -1,25 +1,33 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import GridLayout from './GridLayout'
-import AppBar from './AppBar'
-import WithNavigation from './WithNavigation'
+import AppBar from './HOC/AppBar'
+import WithNavigation from './HOC/WithNavigation'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom';
-import DrawerTypes from './DrawerTypes'
-import AppBarInteraction from './AppBarInteraction'
-
+import DrawerTypes from './HOC/DrawerTypes'
+import AppBarInteraction from './HOC/AppBarInteraction'
+import Header from './Header'
+import Footer from './Footer'
+import HeroContainer from './HeroContainer'
 
 function App() {
   return (
     <Router>
       <div>
-        <AppBarInteraction/>
-        {/* <WithNavigation />
-        <DrawerTypes/> */}
-        <GridLayout />
+        <Header/>
+        <Switch>
+          <HeroContainer/>
+          {/* <AppBarInteraction/> */}
+          {/* <WithNavigation />
+          <DrawerTypes/>
+          <GridLayout /> */}
+        </Switch>
+        <Footer/>
       </div>
     </Router>
   );
