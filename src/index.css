@@ -89,3 +89,40 @@ body {
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
+
+/* Drop down menu */
+
+.menu > li {
+  display: inline;
+}
+
+.dropdown {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown > span {
+  z-index: 2;
+  position: relative;  /* This is important! */
+  cursor: pointer;
+}
+
+.dropdown:hover .features-menu {    /* This used to be `.features-menu` */
+  display: flex;                    /* Leave everything else alone */
+  flex-direction: column;
+  background: #B2D6FF;
+}
+
+.features-menu li {
+  list-style: none;
+  border-bottom: 1px solid #FFF;
+}
+
+.features-menu {                   
+  display: none;
+}
+
+.features-menu li:last-of-type {
+  border-bottom: none;
+}
