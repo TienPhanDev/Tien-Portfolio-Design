@@ -27,6 +27,7 @@ body {
   background-size: cover;
   color: #0a0a0b;
   overflow: hidden;
+  
 }
 
 .cover  {
@@ -45,6 +46,7 @@ body {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  
 }
 /*below is old way; new way to get sticky footer  https://css-tricks.com/couple-takes-sticky-footer/ */
 .footer {
@@ -63,6 +65,8 @@ body {
 
 .navbar {
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
@@ -71,11 +75,12 @@ body {
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);
-  grid-column-gap: 10px;
+  column-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 50%;
+  
   justify-content: space-between;
+  margin-right: 50px;
 }
 
 .nav-links {
@@ -92,8 +97,21 @@ body {
 
 /* Drop down menu */
 
+.a-down:visited {
+  color: #5D6063;
+  text-decoration: none;
+}
+.a-down:hover {
+  text-decoration: underline;
+}
+
 .menu > li {
   display: inline;
+  margin-right: 50px;
+}
+
+.menu > li:last-of-type {
+  margin-right: 0;
 }
 
 .dropdown {
@@ -108,19 +126,30 @@ body {
   cursor: pointer;
 }
 
-.dropdown:hover .features-menu {    /* This used to be `.features-menu` */
-  display: flex;                    /* Leave everything else alone */
+.dropdown:hover .features-menu {
+  display: flex;
   flex-direction: column;
   background: #B2D6FF;
+  border-radius: 10px;
+  padding-top: 25%;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;      
+  top: -20%;
+  left: -65%;
+  z-index: 1;
+}
+
+.features-menu {                 
+  display: none;
+  margin: auto;
 }
 
 .features-menu li {
   list-style: none;
   border-bottom: 1px solid #FFF;
-}
-
-.features-menu {                   
-  display: none;
+  padding: 5px;
+  margin: 5px;
 }
 
 .features-menu li:last-of-type {

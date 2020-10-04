@@ -17,46 +17,44 @@ const Header = () => {
           <img src="https://img.icons8.com/clouds/80/000000/github.png" />
         </a>
       </div>
-      <div className="nav-list">
-        <ul className="nav-menu">
-          <li className="nav-item">
-            <NavLink to="/" className="nav-links">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className="nav-links">
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className="nav-links">
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul class="menu">
-          <li class="dropdown">
-            Portfolio▾
-            <ul class="features-menu">
-              <li>
-                <a href="#">Harder</a>
-              </li>
-              <li>
-                <a href="#">Better</a>
-              </li>
-              <li>
-                <a href="#">Faster</a>
-              </li>
-              <li>
-                <a href="#">Stronger</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <span>Projects &#9662;</span>
+          <ul class="features-menu">
+            <li>
+              <a href="#">Health Check</a>
+            </li>
+            <li>
+              <a href="#">e.Create</a>
+            </li>
+            <li>
+              <a href="#">Ambulance_Racer</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <NavLink to="/about" className="nav-links">
+            <span>About</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className="nav-links">
+            <span>Contact</span>
+          </NavLink>
+        </li>
+      </ul>
+      {/* <ul className="nav-menu">
+        <li>
+          <NavLink to="/about" className="nav-links">
+            <span>About</span>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className="nav-links">
+            <span>Contact</span>
+          </NavLink>
+        </li>
+      </ul> */}
     </div>
   );
 };

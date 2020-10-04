@@ -21,7 +21,7 @@ function App() {
       <div>
         <Header/>
         <Switch>
-          <HeroContainer/>
+          {/* <HeroContainer/> */}
           {/* <AppBarInteraction/> */}
           {/* <WithNavigation />
           <DrawerTypes/>
